@@ -1,0 +1,5 @@
+With EF Core, data access is performed by using a model. A model is made up of entity classes and a context object that represents a session with the database. The context object allows querying and saving data.
+
+Entity class represents and identifies data.
+
+Context class creates and manages DB connection, and is responsible for querying and saving data to entity classes.
