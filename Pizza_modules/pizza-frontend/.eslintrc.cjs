@@ -1,5 +1,5 @@
 module.exports = {
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2020: true, "node": true },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -12,6 +12,7 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
     'no-unused-vars': 'off',
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    'react/jsx-key': 'warn'
   },
 }

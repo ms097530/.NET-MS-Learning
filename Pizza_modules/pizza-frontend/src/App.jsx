@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import Pizza from './Pizza'
+import pizzas from './assets/pizzas'
 
 function App()
 {
-  // const [count, setCount] = useState(0)
+  const data = pizzas.map(pizza => <Pizza key={pizza.id} pizza={pizza} />)
 
   return (
     <>
-      <Pizza />
+      {data}
     </>
   )
 }
