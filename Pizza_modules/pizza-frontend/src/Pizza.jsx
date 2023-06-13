@@ -7,9 +7,22 @@ let pizzas = [{
     id: 2, name: 'Al Tono pizza', description: 'lots of tuna'
 }]
 
-export default function Pizza()
+export default function Pizza({ pizza })
 {
+    const [data, setData] = useState(pizza)
+    const [dirty, setDirty] = useState(false)
+
+    const update = (value, fieldName, obj) =>
+    {
+        setData({ ...obj, [fieldName]: value })
+        setDirty(true)
+    }
+
     return (
-        <div>Pizza</div>
+        <div>
+            <h3>
+                <input onChange={(e) => update(e.target.value, 'name', data)} value={data.name} />
+            </h3>
+        </div>
     )
 }
