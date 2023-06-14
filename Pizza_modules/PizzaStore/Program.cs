@@ -9,20 +9,41 @@ var connectionString = builder.Configuration.GetConnectionString("Pizzas") ?? "D
 
 builder.Services.AddEndpointsApiExplorer();
 // builder.Services.AddDbContext<PizzaDb>(options => options.UseInMemoryDatabase("items"));
+
 builder.Services.AddSqlite<PizzaDb>(connectionString);
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Pizza Store API", Description = "Mama mia!", Version = "v1" });
 });
 
+// ? CORS
+// * 1) define a unique string
+const string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+// * 2) define allowed domains
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        builder =>
+        {
+            builder.WithOrigins(
+                "http://example.com", "*"
+            );
+        });
+});
+
 
 var app = builder.Build();
+
 
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo API V1");
 });
+
+// * 3) use the capability
+app.UseCors(MyAllowSpecificOrigins);
 
 app.MapGet("/", () => "Hello World!");
 app.MapGet("/pizzas", async (PizzaDb db) => await db.Pizzas.ToListAsync());
