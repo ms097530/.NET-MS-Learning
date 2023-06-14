@@ -7,18 +7,18 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'http://localhost:5001',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       },
       '^/fallback/.*': {
-        target: 'http://localhost:3000',
+        target: 'http://localhost:5001',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/fallback/, '')
       },
       // * Using the proxy instance
       // '/api': {
-      //   target: 'http://localhost:3000',
+      //   target: 'http://localhost:5001',
       //   changeOrigin: true,
       //   configure: (proxy, options) => {
       //     // proxy will be an instance of 'http-proxy'

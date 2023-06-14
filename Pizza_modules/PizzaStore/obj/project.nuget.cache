@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CkKh5hvQ8lFyR73XwqrphpzJhtYk9YBm+Tgazu9exb3z0cgSOLb8BkJMal3EDZXIPFzmE0WqjHxa7OIE0OWO+Q==",
+  "dgSpecHash": "QfYnoqd9wmig+EfIJ8Uwqz8q0gQrzfe7VGQT4PS2xHOrx5yjd1GMGQcPM1ZjCFlhZ9h7ETYqyrBlLcivVe4SEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mikew\\Documents\\Coding\\C# and .NET\\Learning\\MS Modules\\Create web apps and services with ASP.NET Core, minimal API, and .NET\\PizzaStore\\PizzaStore.csproj",
+  "projectFilePath": "C:\\Users\\mikew\\Documents\\Coding\\CSharp_and_NET\\Learning\\MS Modules\\Pizza_modules\\PizzaStore\\PizzaStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mikew\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\mikew\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.5\\microsoft.data.sqlite.core.7.0.5.nupkg.sha512",

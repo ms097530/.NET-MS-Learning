@@ -1727,11 +1727,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mikew\\Documents\\Coding\\C# and .NET\\Learning\\MS Modules\\Create web apps and services with ASP.NET Core, minimal API, and .NET\\PizzaStore\\PizzaStore.csproj",
+      "projectUniqueName": "C:\\Users\\mikew\\Documents\\Coding\\CSharp_and_NET\\Learning\\MS Modules\\Pizza_modules\\PizzaStore\\PizzaStore.csproj",
       "projectName": "PizzaStore",
-      "projectPath": "C:\\Users\\mikew\\Documents\\Coding\\C# and .NET\\Learning\\MS Modules\\Create web apps and services with ASP.NET Core, minimal API, and .NET\\PizzaStore\\PizzaStore.csproj",
+      "projectPath": "C:\\Users\\mikew\\Documents\\Coding\\CSharp_and_NET\\Learning\\MS Modules\\Pizza_modules\\PizzaStore\\PizzaStore.csproj",
       "packagesPath": "C:\\Users\\mikew\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mikew\\Documents\\Coding\\C# and .NET\\Learning\\MS Modules\\Create web apps and services with ASP.NET Core, minimal API, and .NET\\PizzaStore\\obj\\",
+      "outputPath": "C:\\Users\\mikew\\Documents\\Coding\\CSharp_and_NET\\Learning\\MS Modules\\Pizza_modules\\PizzaStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mikew\\AppData\\Roaming\\NuGet\\NuGet.Config"
