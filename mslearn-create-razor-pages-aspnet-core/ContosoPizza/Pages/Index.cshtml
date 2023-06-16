@@ -1,10 +1,19 @@
-﻿@page
+﻿@* * specifies this is a Razor Page *@
+@page
+@* * specifies model type for page (IndexModel in Pages/Index.cshtml.cs) *@
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    @* * ViewData dictionary is used to pass data between Razor page and IndexModel class... at runtime, Title value is used to set the page's <title> element (set in Shared/_Layout.cshtml) *@
+    ViewData["Title"] = "The Home for Pizza Lovers";
+    @* * this calculates amount of time that has passed since the business opened *@
+    TimeSpan timeInBusiness = DateTime.Now - new DateTime(2018, 8, 14);
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to Contoso Pizza</h1>
+    <p class="lead">
+        @* * "@" used to convert TotalDays property of timeInBusiness to integer *@
+        @* * Convert class is part of System namespace, which is imported automatically by the <ImplicitUsings> element in csproj file *@
+        The best pizza in town for @Convert.ToInt32(timeInBusiness.TotalDays) days!
+    </p>
 </div>
