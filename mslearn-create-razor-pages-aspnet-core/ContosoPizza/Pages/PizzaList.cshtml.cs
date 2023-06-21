@@ -7,6 +7,10 @@ namespace ContosoPizza.Pages
 {
     public class PizzaListModel : PageModel
     {
+        // * BindProperty attribute is used to bind the NewPizza property to the Razor page... when an HTTP POST request is made, the NewPizza property will be populated with the user's input
+        [BindProperty]
+        public Pizza NewPizza { get; set; } = default!;
+
         // * holds reference to a PizzaService object - can't be changed after set in ctor
         private readonly PizzaService _service;
         // * will hold a list of Pizza objects
@@ -22,6 +26,20 @@ namespace ContosoPizza.Pages
         public void OnGet()
         {
             PizzaList = _service.GetPizzas();
+        }
+
+        public IActionResult OnPost()
+        {
+            // * ModelState.IsValid is based on validation rules inferred from attributes (such as Required and Range) on the Pizza class in Models/Pizza.cs
+            // ! if invalid, re-render the page
+            if (!ModelState.IsValid || NewPizza == null)
+            {
+                return Page();
+            }
+
+            // * add pizza using _service object and re-render page
+            _service.AddPizza(NewPizza);
+            return RedirectToAction("Get");
         }
     }
 }
