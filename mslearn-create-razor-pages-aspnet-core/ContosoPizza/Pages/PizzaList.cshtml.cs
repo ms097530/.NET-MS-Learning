@@ -42,6 +42,8 @@ namespace ContosoPizza.Pages
             return RedirectToAction("Get");
         }
 
+        // ? with current setup, name must be OnPostDelete (because embedded in form with method post and asp-page-handler tag helper set to "Delete")
+        // * id is passed via asp-route-id tag helper
         public IActionResult OnPostDelete(int id)
         {
             _service.DeletePizza(id);
