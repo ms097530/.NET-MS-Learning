@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\mslearn-blazor-build-web-apps.props" />
+</Project>

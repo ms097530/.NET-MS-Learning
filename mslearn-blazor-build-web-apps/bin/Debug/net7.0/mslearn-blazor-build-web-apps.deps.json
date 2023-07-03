@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "mslearn-blazor-build-web-apps/1.0.0": {
+        "runtime": {
+          "mslearn-blazor-build-web-apps.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "mslearn-blazor-build-web-apps/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
