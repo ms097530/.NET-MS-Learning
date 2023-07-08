@@ -7,6 +7,14 @@
 <h3>Todo</h3>
 <p>@msg</p>
 
+<ul>
+    @foreach (var todo in todos)
+    {
+        <li>@todo.Title</li>
+    }
+</ul>
+
 @code { 
     private string msg = "Hello World";
+    private List<TodoItem> todos = new();
 } 
