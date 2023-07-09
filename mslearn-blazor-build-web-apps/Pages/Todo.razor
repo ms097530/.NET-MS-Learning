@@ -14,11 +14,21 @@
     }
 </ul>
 
-<input placeholder="Something todo" />
-<button>Add todo</button>
+<input placeholder="Something todo" @bind="newTodo" />
+<button @onclick="AddTodo">Add todo</button>
 
 
 @code { 
     private string msg = "Hello World";
     private List<TodoItem> todos = new();
+    private string? newTodo;
+    private void AddTodo()
+    {
+        @* * Append does not mutate the list - must reassign *@
+        @* todos = todos.Append(new TodoItem {Title = newTodo}).ToList(); *@
+        @* * Add mutates item it is called on *@
+        todos.Add(new TodoItem {Title = newTodo});
+        Console.WriteLine(todos.Last().Title);
+        newTodo = string.Empty;
+    }
 } 
