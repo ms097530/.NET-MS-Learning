@@ -27,6 +27,12 @@
             }
         }
     </ul>
+
+    <h1>My favorite pizza is: @favPizza</h1>
+    <p>
+        Enter your favorite pizza:
+        <input @bind="favPizza" />
+    </p>
 </div>
 
 @if (OrderState.ShowingConfigureDialog)
@@ -38,6 +44,7 @@
 }
 		
 @code {
+    private string favPizza {get; set; } = "Meat";
     List<PizzaSpecial> specials = new();
     
     @* * initialize hard-coded pizzas *@
