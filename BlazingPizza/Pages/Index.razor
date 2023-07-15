@@ -9,13 +9,16 @@
         {
             @foreach (var special in specials)
             {
-                <li style="background-image: url('@special.ImageUrl')">
-                    <div class="pizza-info">
-                        <span class="title">@special.Name</span>
-                        @special.Description
-                        <span class="price">@special.GetFormattedBasePrice()</span>
-                    </div>
-                </li>
+                <CascadingValue Name="Test" Value=@(special.Id.ToString() + "yahoo")>
+                    <li style="background-image: url('@special.ImageUrl')">
+                        <div class="pizza-info">
+                            <span class="title">@special.Name</span>
+                            @special.Description
+                            <Test />
+                            <span class="price">@special.GetFormattedBasePrice()</span>
+                        </div>
+                    </li>
+                </CascadingValue>
             }
         }
     </ul>
