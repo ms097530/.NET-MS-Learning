@@ -9,6 +9,7 @@
         {
             @foreach (var special in specials)
             {
+                @* cascading value is available to all nested components (Test in this case) *@
                 <CascadingValue Name="Test" Value=@(special.Id.ToString() + "yahoo")>
                     <li style="background-image: url('@special.ImageUrl')">
                         <div class="pizza-info">
