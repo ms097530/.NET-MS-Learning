@@ -31,7 +31,8 @@
     <h1>My favorite pizza is: @favPizza</h1>
     <p>
         Enter your favorite pizza:
-        <input @bind="favPizza" />
+        @* <input @bind="favPizza" /> *@
+        <input @bind-value="favPizza" @bind-value:event="oninput" />
     </p>
 </div>
 
