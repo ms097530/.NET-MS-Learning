@@ -11,7 +11,9 @@
         <form class="dialog-body">
             <div>
                 <label>Size:</label>
-                <input type="range" min="@Pizza.MinimumSize" max="@Pizza.MaximumSize" step="1" />
+                @* size changes by step amount per shift *@
+                <input type="range" min="@Pizza.MinimumSize" max="@Pizza.MaximumSize" step="1" @bind="Pizza.Size" />
+                @* updates when pizza size changes using range input b/c method uses pizza size *@
                 <span class="size-label">
                     @(Pizza.Size)" (£@(Pizza.GetFormattedTotalPrice()))"
                 </span>
@@ -23,6 +25,7 @@
                 Cancel
             </button>
             <span class="mr-center">
+                @* updates when pizza size changes using range input b/c method uses pizza size *@
                 Price: <span class="price">@(Pizza.GetFormattedTotalPrice())</span>
             </span>
             <button @onclick="OnConfirm" class="btn btn-success ml-auto">
