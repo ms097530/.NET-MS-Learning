@@ -6,7 +6,7 @@ public class OrderState
     public Pizza ConfiguringPizza { get; private set; }
     public Order Order { get; private set; } = new Order();
 
-    public void ShowingConfigurePizzaDialog(PizzaSpecial special)
+    public void ShowConfigurePizzaDialog(PizzaSpecial special)
     {
         ConfiguringPizza = new Pizza()
         {
